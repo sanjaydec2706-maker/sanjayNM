@@ -1,0 +1,101 @@
+/* Futuristic Premium Portfolio Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #16213e);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: rgba(10, 10, 20, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #e0e0e0;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: rgb(132, 0, 255);
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* Content area */
+.content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2em;
+  color: rgb(111, 0, 255);
+  text-shadow: 0 0 15px rgba(132, 0, 255, 0.747);
+  margin-bottom: 20px;
+}
+
+.content p, .content li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  margin: 8px 0;
+  background: rgba(34, 182, 182, 0.05);
+  border-left: 3px solid rgb(140, 0, 255);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateX(6px);
+  background: rgba(78, 94, 94, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
